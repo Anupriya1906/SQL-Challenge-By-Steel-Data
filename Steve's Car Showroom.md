@@ -1,4 +1,6 @@
 # Tables
+
+
 CREATE TABLE cars (
 car_id INT PRIMARY KEY,
 make VARCHAR(50),
