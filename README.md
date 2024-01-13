@@ -5,4 +5,4 @@ Explore a collection of SQL challenges thoughtfully put together by Steeldata. T
 
 ##### Find below the challenges,
 
-1. Challenge 1 - [Steve's Car Showroom](Steve's-Car-Showroom.md)
+1. Challenge 1 - [Steve's Car Showroom](Challenge_1_Steve's_Car_Showroom.md)
