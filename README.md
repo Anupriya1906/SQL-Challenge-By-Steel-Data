@@ -4,4 +4,4 @@ Welcome to a set of SQL challenges put together by Steeldata. Take a look at the
 
 ##### Find below the challenges,
 
-1. Challenge 1 - [here](Steve's-Car-Showroom.md)
+1. Challenge 1 - [Steve's Car Showroom](Steve's-Car-Showroom.md)
