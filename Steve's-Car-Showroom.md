@@ -66,3 +66,15 @@ VALUES (1, 1, 1, '2021-01-01'),
 (18, 6, 3, '2023-02-03'),
 (19, 7, 1, '2023-02-10'),
 (20, 4, 4, '2023-03-01');
+```
+
+## Business Queries
+
+##### 1. What are the details of all cars purchased in the year 2022?
+```sql
+SELECT * 
+FROM cars c
+LEFT JOIN sales s
+ON c.car_id = s.car_id
+WHERE YEAR(purchase_date) = 2022;
+```
