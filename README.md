@@ -1,3 +1,3 @@
 # SQL-Challenge-By-Steel-Data
 
-Welcome to the captivating world of SQL challenges brought to you by SteelData! Dive into the realm of data exploration and hone your SQL skills with this thoughtfully curated series by Matthew Steel. For more details about SteelData, visit their site [here](https://www.steeldata.org.uk/sql.html)
+Welcome to a set of SQL challenges put together by Steeldata. Take a look at their website [here](https://www.steeldata.org.uk/sql.html). Matthew has skillfully created this fantastic series to help data enthusiasts gain hands-on experience. Taking part in these challenges has really helped me understand the topics better and improve my SQL skills!
