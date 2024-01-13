@@ -78,3 +78,12 @@ LEFT JOIN sales s
 ON c.car_id = s.car_id
 WHERE YEAR(purchase_date) = 2022;
 ```
+##### 2. What is the total number of cars sold by each salesperson?
+```sql
+SELECT p.salesman_id salesman_id, p.name Salesperson, COUNT(s.car_id) Cars_Sold
+FROM salespersons p
+LEFT JOIN sales s
+ON p.salesman_id = s.salesman_id
+GROUP BY 1,2
+ORDER BY 3 DESC;
+```
