@@ -1,3 +1,8 @@
+# Challenge 1 - Steve's Car Showroom
+
+## Introduction
+Explore the 'Top-End Car Showroom Data Challenge,' where we step into Steve's shoes to analyze data for his high-end car showroom. Join me in unraveling insights to help Steve make informed decisions.
+
 ## Tables
 ```sql
 CREATE TABLE cars (
