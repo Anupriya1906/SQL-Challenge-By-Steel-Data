@@ -1,1 +1,1 @@
-# SQL-Challenge-By-Steel-Data
+# SteelData-SQL-Challenges-Series
