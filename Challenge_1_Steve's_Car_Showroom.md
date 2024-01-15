@@ -153,3 +153,29 @@ JOIN sales s
 ON c.car_id = s.car_id
 WHERE style = 'SUV' AND YEAR(purchase_date) = 2022;
 ```
+##### 9. What is the name and city of the salesperson who sold the most number of cars in the year 2023?
+```sql
+SELECT p.name AS Salesperson,
+       p.city AS City,
+       COUNT(s.sale_id) AS No_of_Cars_sold
+FROM salespersons p
+JOIN sales s ON p.salesman_id = s.salesman_id AND YEAR(s.purchase_date) = 2023
+GROUP BY p.name,p.city 
+ORDER BY No_of_Cars_sold DESC
+LIMIT 1;
+```
+##### 10. What is the name and age of the salesperson who generated the highest revenue in the year 2022?
+```sql
+SELECT p.name AS Salesperson,
+	   p.age AS Age,
+       SUM(c.cost_$) AS Revenue_gen
+FROM salespersons p 
+JOIN sales s 
+ON p.salesman_id = s.salesman_id
+JOIN cars c 
+ON s.car_id = c.car_id
+WHERE YEAR(purchase_date) = 2022
+GROUP BY p.name, p.age
+ORDER BY SUM(c.cost_$) DESC
+LIMIT 1;
+```
