@@ -3,7 +3,7 @@
 ## Introduction
 Explore the 'Top-End Car Showroom Data Challenge,' where we step into Steve's shoes to analyze data for his high-end car showroom. Join me in unraveling insights to help Steve make informed decisions.
 
-## Tables
+## Tables Creation
 ```sql
 CREATE TABLE cars (
 car_id INT PRIMARY KEY,
