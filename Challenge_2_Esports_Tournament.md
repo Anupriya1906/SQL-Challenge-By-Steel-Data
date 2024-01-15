@@ -1,7 +1,7 @@
 # Challenge 2 - Esports Tournament
 
 ## Introduction
-The top eSports competitors from across the globe have gathered to battle it out. Join me in analysing data to find out all about the tournament
+The top eSports competitors from across the globe have gathered to battle it out. Join me in analysing the data to find out all about the tournament.
 
 ## Tables Creation
 ```sql
@@ -69,4 +69,31 @@ VALUES (1, 1, 2, '2022-01-01', 1, 16, 14),
 (8, 5, 1, '2022-04-01', 1, 11, 15),
 (9, 2, 3, '2022-05-01', 3, 9, 10),
 (10, 4, 5, '2022-01-01', 4, 13, 10);
+```
+
+## Business Queries
+
+##### 1. What are the names of the players whose salary is greater than 100,000?
+```sql
+SELECT player_name
+FROM players
+WHERE salary > 100000;
+```
+##### 2. What is the team name of the player with player_id = 3?
+```sql
+SELECT t.team_name
+FROM teams t
+JOIN players p 
+ON t.team_id = p.team_id
+WHERE player_id = 3;
+```
+##### 3. What is the total number of players in each team?
+```sql
+SELECT t.team_id AS team_id,
+       t.team_name AS team_name,
+       COUNT(p.player_id) AS No_of_Players
+FROM teams t
+JOIN players p 
+ON t.team_id = p.team_id
+GROUP BY team_id, team_name;
 ```
