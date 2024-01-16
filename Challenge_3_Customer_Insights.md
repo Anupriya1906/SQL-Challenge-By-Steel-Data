@@ -100,3 +100,23 @@ VALUES (1, 1),
 SELECT country_name
 FROM country;
 ```
+##### 2. What is the total number of customers in the customers table?
+```sql
+SELECT COUNT(customer_id) AS Total_Cust
+FROM customers;
+```
+##### 3. What is the average age of customers who can receive marketing emails (can_email is set to 'yes')?
+```sql
+SELECT ROUND(AVG(age)) AS Avg_age
+FROM customers
+WHERE can_email = 'yes';
+```
+##### 4. How many orders were made by customers aged 30 or older?
+```sql
+SELECT COUNT(o.order_id) AS No_of_Orders
+FROM orders o
+JOIN customers c
+ON o.customer_id = c.customer_id
+WHERE age >= 30;
+```
+##### 
