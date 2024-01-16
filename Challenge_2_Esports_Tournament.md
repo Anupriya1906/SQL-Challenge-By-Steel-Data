@@ -113,3 +113,20 @@ SELECT player_name,
 FROM players
 WHERE team_id = 1;
 ```
+##### 6. What are the team names and the number of matches they have won?
+```sql
+SELECT t.team_name, 
+       COUNT(m.winner_id) AS Matches_Won
+FROM matches m
+JOIN teams t
+ON m.winner_id = t.team_id
+GROUP BY t.team_name;
+```
+##### 7. What is the average salary of players in the teams with country 'USA'?
+```sql
+SELECT AVG(p.salary) AS Avg_Salary
+FROM teams t 
+JOIN players p 
+ON t.team_id = p.team_id
+WHERE t.country = 'USA';
+```
