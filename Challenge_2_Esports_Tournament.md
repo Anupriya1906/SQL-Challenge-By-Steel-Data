@@ -130,3 +130,32 @@ JOIN players p
 ON t.team_id = p.team_id
 WHERE t.country = 'USA';
 ```
+##### 8. Which team won the most matches?
+```sql
+SELECT t.team_name, 
+       COUNT(m.winner_id) AS Matches_Won
+FROM matches m
+JOIN teams t
+ON m.winner_id = t.team_id
+GROUP BY t.team_name
+ORDER BY Matches_Won DESC
+LIMIT 1;
+```
+##### 9. What are the team names and the number of players in each team whose salary is greater than 100,000?
+```sql
+SELECT t.team_name,
+	   COUNT(p.player_id) AS No_of_players
+FROM teams t
+JOIN players p 
+ON t.team_id = p.team_id
+WHERE p.salary > 100000
+GROUP BY t.team_name;
+```
+##### 10. What is the date and the score of the match with match_id = 3?
+```sql
+SELECT match_date,
+       score_team1,
+       score_team2
+FROM matches
+WHERE match_id = 3;
+```
