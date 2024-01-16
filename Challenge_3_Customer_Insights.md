@@ -1,7 +1,8 @@
 # Challenge 3 - Customer Insights
 
 ## Introduction
-In my role as a Customer Insights Analyst for 'The General Store,' I am examining the provided tables to uncover vital customer information. The goal is to extract valuable insights that can be shared with the marketing team to enhance their strategies.
+
+As a Customer Insights Analyst for 'The General Store,' I am analyzing the given tables to discover essential information about customers. The aim is to extract valuable insights that can be shared with the marketing team to enhance their strategies..
 
 ## Tables Creation
 ```sql
