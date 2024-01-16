@@ -93,3 +93,10 @@ VALUES (1, 1),
 (8, 3),
 (8, 3);
 ```
+## Business Queries
+
+##### 1. What are the names of all the countries in the country table?
+```sql
+SELECT country_name
+FROM country;
+```
