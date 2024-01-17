@@ -134,3 +134,10 @@ SELECT ROUND(AVG(price),2) AS Avg_price
 FROM products
 WHERE category='food';
 ```
+ ##### 7. How many orders were made in each sales channel (sales_channel column) in the orders table?
+```sql
+SELECT sales_channel,
+	   COUNT(*) AS No_of_orders
+FROM orders
+GROUP BY sales_channel
+```
