@@ -139,5 +139,5 @@ WHERE category='food';
 SELECT sales_channel,
        COUNT(*) AS No_of_orders
 FROM orders
-GROUP BY sales_channel
+GROUP BY sales_channel;
 ```
