@@ -128,3 +128,9 @@ JOIN products p
 ON b.product_id = p.product_id
 GROUP BY category;
 ```
+ ##### 6. What is the average price of products in the 'food' category?
+```sql
+SELECT ROUND(AVG(price),2) AS Avg_price
+FROM products
+WHERE category='food';
+```
