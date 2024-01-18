@@ -141,3 +141,11 @@ SELECT sales_channel,
 FROM orders
 GROUP BY sales_channel;
 ```
+ ##### 8.What is the date of the latest order made by a customer who can receive marketing emails?
+```sql
+SELECT MAX(o.date_shop) AS latest_date
+FROM customers c
+JOIN orders o
+ON c.customer_id = o.customer_id
+WHERE can_email = 'yes';
+```
