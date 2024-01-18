@@ -159,3 +159,12 @@ GROUP BY c.country_name
 ORDER BY COUNT(*) DESC
 LIMIT 1;
 ```
+##### 10. What is the average age of customers who made orders in the 'vitamins' product category?
+```sql
+SELECT AVG(c.age) AS Avg_age
+FROM orders o 
+JOIN baskets b ON o.order_id = b.order_id
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN products p ON p.product_id = b.product_id
+WHERE p.category = 'vitamins';
+```
