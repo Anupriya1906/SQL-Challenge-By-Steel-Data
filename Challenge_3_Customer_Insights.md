@@ -128,24 +128,34 @@ JOIN products p
 ON b.product_id = p.product_id
 GROUP BY category;
 ```
- ##### 6. What is the average price of products in the 'food' category?
+##### 6. What is the average price of products in the 'food' category?
 ```sql
 SELECT ROUND(AVG(price),2) AS Avg_price
 FROM products
 WHERE category='food';
 ```
- ##### 7. How many orders were made in each sales channel (sales_channel column) in the orders table?
+##### 7. How many orders were made in each sales channel (sales_channel column) in the orders table?
 ```sql
 SELECT sales_channel,
        COUNT(*) AS No_of_orders
 FROM orders
 GROUP BY sales_channel;
 ```
- ##### 8.What is the date of the latest order made by a customer who can receive marketing emails?
+##### 8.What is the date of the latest order made by a customer who can receive marketing emails?
 ```sql
 SELECT MAX(o.date_shop) AS latest_date
 FROM customers c
 JOIN orders o
 ON c.customer_id = o.customer_id
 WHERE can_email = 'yes';
+```
+##### 9. What is the name of the country with the highest number of orders?
+```sql
+SELECT c.country_name
+FROM orders o
+JOIN country c
+ON o.country_id = c.country_id
+GROUP BY c.country_name
+ORDER BY COUNT(*) DESC
+LIMIT 1;
 ```
