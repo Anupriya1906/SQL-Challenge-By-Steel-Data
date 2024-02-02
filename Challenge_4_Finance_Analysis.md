@@ -119,3 +119,12 @@ VALUES (1, 1, '2022-01-01', -500.00),
 (14, 8, '2022-01-14', -1000.00),
 (15, 9, '2022-01-15', 500.00);
 ```
+## Business Queries
+
+##### 1. What are the names of all the customers who live in New York?
+```sql
+SELECT 
+CONCAT(FirstName,' ',LastName) AS 'Customer Name'
+FROM customers
+WHERE city = 'New York';
+```
