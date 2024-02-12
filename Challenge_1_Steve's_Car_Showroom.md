@@ -70,7 +70,7 @@ VALUES (1, 1, 1, '2021-01-01'),
 
 ## Business Queries
 
-##### 1. What are the details of all cars purchased in the year 2022?
+### 1. What are the details of all cars purchased in the year 2022?
 ```sql
 SELECT * 
 FROM cars c
