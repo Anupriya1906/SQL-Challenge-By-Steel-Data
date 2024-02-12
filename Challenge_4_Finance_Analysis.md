@@ -150,3 +150,14 @@ JOIN customers c
 ON a.CustomerID = c.CustomerID
 WHERE City = 'Los Angeles';
 ```
+ ### 5. Which branch has the highest average account balance?
+```sql
+SELECT b.BranchName,
+       AVG(a.Balance) AS Avg_AccBalance
+FROM accounts a 
+JOIN branches b 
+ON a.BranchID = b.BranchID
+GROUP BY b.BranchName
+ORDER  BY Avg_AccBalance DESC
+LIMIT 1;
+```
