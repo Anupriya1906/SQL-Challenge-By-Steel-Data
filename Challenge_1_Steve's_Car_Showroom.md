@@ -103,7 +103,7 @@ ON s.car_id = c.car_id
 GROUP BY 1,2
 ORDER BY 4 DESC;
 ```
-##### 4. What are the details of the cars sold by each salesperson?
+### 4. What are the details of the cars sold by each salesperson?
 ```sql
 SELECT p.name Salesperson,
        c.car_id Car_id,
