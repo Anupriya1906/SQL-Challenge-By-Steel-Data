@@ -128,3 +128,9 @@ CONCAT(FirstName,' ',LastName) AS 'Customer Name'
 FROM customers
 WHERE city = 'New York';
 ```
+##### 2. What is the total number of accounts in the Accounts table?
+```sql
+SELECT
+COUNT(*) AS 'Total Accounts'
+FROM accounts;
+```
