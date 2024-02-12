@@ -164,7 +164,7 @@ GROUP BY p.name,p.city
 ORDER BY No_of_Cars_sold DESC
 LIMIT 1;
 ```
-##### 10. What is the name and age of the salesperson who generated the highest revenue in the year 2022?
+### 10. What is the name and age of the salesperson who generated the highest revenue in the year 2022?
 ```sql
 SELECT p.name AS Salesperson,
 	   p.age AS Age,
