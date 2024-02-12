@@ -127,7 +127,7 @@ ON c.car_id = s.car_id
 GROUP BY 1
 ORDER BY 2 DESC;
 ```
-##### 6. What are the details of the cars sold in the year 2021 by salesperson 'Emily Wong'?
+### 6. What are the details of the cars sold in the year 2021 by salesperson 'Emily Wong'?
 ```sql
 SELECT c.*
 FROM salespersons p 
