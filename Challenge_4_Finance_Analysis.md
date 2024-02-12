@@ -134,3 +134,19 @@ SELECT
 COUNT(*) AS 'Total Accounts'
 FROM accounts;
 ```
+### 3. What is the total balance of all checking accounts?
+```sql
+SELECT 
+SUM(Balance) AS TotalCheckingBalance
+FROM accounts
+WHERE AccountType = 'checking';
+```
+### 4. What is the total balance of all accounts associated with customers who live in Los Angeles?
+```sql
+SELECT 
+SUM(Balance) AS TotalBalanceLA
+FROM accounts a
+JOIN customers c
+ON a.CustomerID = c.CustomerID
+WHERE City = 'Los Angeles';
+```
