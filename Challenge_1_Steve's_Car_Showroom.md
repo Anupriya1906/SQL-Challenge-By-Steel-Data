@@ -153,7 +153,7 @@ JOIN sales s
 ON c.car_id = s.car_id
 WHERE style = 'SUV' AND YEAR(purchase_date) = 2022;
 ```
-##### 9. What is the name and city of the salesperson who sold the most number of cars in the year 2023?
+### 9. What is the name and city of the salesperson who sold the most number of cars in the year 2023?
 ```sql
 SELECT p.name AS Salesperson,
        p.city AS City,
