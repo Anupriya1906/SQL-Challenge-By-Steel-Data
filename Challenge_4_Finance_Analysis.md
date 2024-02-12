@@ -161,3 +161,15 @@ GROUP BY b.BranchName
 ORDER  BY Avg_AccBalance DESC
 LIMIT 1;
 ```
+### 6. Which customer has the highest current balance in their accounts?
+```sql
+SELECT c.CustomerID,
+       CONCAT(firstname,' ',lastname) AS CustomerName,
+       SUM(Balance) AS CurrentBalance
+FROM accounts a
+JOIN customers c 
+ON a.CustomerID = c.CustomerID
+GROUP BY c.CustomerID, CustomerName
+ORDER BY CurrentBalance DESC
+LIMIT 1;
+```
