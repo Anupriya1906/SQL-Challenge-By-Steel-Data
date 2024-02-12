@@ -121,14 +121,14 @@ VALUES (1, 1, '2022-01-01', -500.00),
 ```
 ## Business Queries
 
-##### 1. What are the names of all the customers who live in New York?
+### 1. What are the names of all the customers who live in New York?
 ```sql
 SELECT 
 CONCAT(FirstName,' ',LastName) AS 'Customer Name'
 FROM customers
 WHERE city = 'New York';
 ```
-##### 2. What is the total number of accounts in the Accounts table?
+### 2. What is the total number of accounts in the Accounts table?
 ```sql
 SELECT
 COUNT(*) AS 'Total Accounts'
