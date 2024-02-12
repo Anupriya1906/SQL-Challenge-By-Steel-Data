@@ -78,7 +78,7 @@ LEFT JOIN sales s
 ON c.car_id = s.car_id
 WHERE YEAR(purchase_date) = 2022;
 ```
-##### 2. What is the total number of cars sold by each salesperson?
+### 2. What is the total number of cars sold by each salesperson?
 ```sql
 SELECT p.salesman_id salesman_id,
        p.name Salesperson,
