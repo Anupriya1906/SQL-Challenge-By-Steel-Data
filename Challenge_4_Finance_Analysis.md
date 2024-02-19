@@ -205,3 +205,14 @@ SELECT branchid,
 FROM cte
 WHERE rnk_bal = 1;
 ```
+### 9. Which customer has the highest total balance across all of their accounts, including savings and checking accounts?
+```sql
+SELECT c.FirstName,
+       c.LastName,
+       SUM(a.Balance) AS TotalBalance
+FROM Customers c
+JOIN Accounts a ON c.CustomerID = a.CustomerID
+GROUP BY c.FirstName, c.LastName
+ORDER BY TotalBalance DESC
+LIMIT 1;
+```
