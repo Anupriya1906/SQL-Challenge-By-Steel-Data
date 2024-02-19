@@ -189,3 +189,19 @@ SELECT FirstName, LastName, TotalTransactions
 FROM cte
 WHERE T_Rank = 1;
 ```
+### 8. Which branch has the highest total balance across all of its accounts?
+```sql
+WITH cte AS(
+   SELECT b.branchid,
+       b.branchname,
+       a.balance,
+       DENSE_RANK() OVER (ORDER BY a.balance DESC) AS rnk_bal
+   FROM branches b
+   JOIN accounts a ON b.branchid = a.branchid
+   )
+SELECT branchid,
+       branchname,
+       balance 
+FROM cte
+WHERE rnk_bal = 1;
+```
