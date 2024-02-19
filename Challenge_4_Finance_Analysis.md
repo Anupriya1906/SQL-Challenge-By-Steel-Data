@@ -173,3 +173,19 @@ GROUP BY c.CustomerID, CustomerName
 ORDER BY CurrentBalance DESC
 LIMIT 1;
 ```
+### 7. Which customer has made the most transactions in the Transactions table?
+```sql
+WITH cte AS (
+    SELECT c.FirstName, 
+           c.LastName,
+           COUNT(t.TransactionID) AS TotalTransactions,
+           RANK() OVER (ORDER BY COUNT(t.TransactionID) DESC) AS T_Rank
+    FROM Customers c
+    JOIN Accounts a ON c.CustomerID = a.CustomerID
+    JOIN Transactions t ON a.AccountID = t.AccountID
+    GROUP BY c.FirstName, c.LastName
+)
+SELECT FirstName, LastName, TotalTransactions
+FROM cte
+WHERE T_Rank = 1;
+```
