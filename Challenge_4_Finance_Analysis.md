@@ -216,3 +216,20 @@ GROUP BY c.FirstName, c.LastName
 ORDER BY TotalBalance DESC
 LIMIT 1;
 ```
+### 10. Which branch has the highest number of transactions in the Transactions table?
+```sql
+WITH cte AS (
+	SELECT b.BranchID,
+		   b.BranchName,
+		   COUNT(t.TransactionDate) AS Total_transactions,
+		   DENSE_RANK() OVER (ORDER BY (COUNT(t.TransactionDate)) DESC) AS rnk_tran
+	FROM transactions t 
+	JOIN accounts a ON t.AccountID = a.AccountID
+	JOIN branches b ON a.BranchID = b.BranchID
+	GROUP BY 1, 2
+)
+SELECT branchid,
+       branchname
+FROM cte 
+WHERE rnk_tran = 1;
+```
