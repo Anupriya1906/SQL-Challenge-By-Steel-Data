@@ -141,7 +141,7 @@ GROUP BY t.team_name
 ORDER BY Matches_Won DESC
 LIMIT 1;
 ```
-##### 9. What are the team names and the number of players in each team whose salary is greater than 100,000?
+### 9. What are the team names and the number of players in each team whose salary is greater than 100,000?
 ```sql
 SELECT t.team_name,
 	   COUNT(p.player_id) AS No_of_players
