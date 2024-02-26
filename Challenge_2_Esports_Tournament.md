@@ -79,7 +79,7 @@ SELECT player_name
 FROM players
 WHERE salary > 100000;
 ```
-##### 2. What is the team name of the player with player_id = 3?
+### 2. What is the team name of the player with player_id = 3?
 ```sql
 SELECT t.team_name
 FROM teams t
