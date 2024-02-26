@@ -113,7 +113,7 @@ SELECT player_name,
 FROM players
 WHERE team_id = 1;
 ```
-##### 6. What are the team names and the number of matches they have won?
+### 6. What are the team names and the number of matches they have won?
 ```sql
 SELECT t.team_name, 
        COUNT(m.winner_id) AS Matches_Won
