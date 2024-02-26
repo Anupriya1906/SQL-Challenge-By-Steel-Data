@@ -106,7 +106,7 @@ JOIN players p
 ON t.team_id = p.team_id
 where t.team_id=2 AND captain_id = player_id;
 ```
-##### 5. What are the player names and their roles in the team with team_id = 1?
+### 5. What are the player names and their roles in the team with team_id = 1?
 ```sql
 SELECT player_name,
        role
