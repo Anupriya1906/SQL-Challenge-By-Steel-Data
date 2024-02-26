@@ -151,7 +151,7 @@ ON t.team_id = p.team_id
 WHERE p.salary > 100000
 GROUP BY t.team_name;
 ```
-##### 10. What is the date and the score of the match with match_id = 3?
+### 10. What is the date and the score of the match with match_id = 3?
 ```sql
 SELECT match_date,
        score_team1,
