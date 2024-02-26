@@ -130,7 +130,7 @@ JOIN players p
 ON t.team_id = p.team_id
 WHERE t.country = 'USA';
 ```
-##### 8. Which team won the most matches?
+### 8. Which team won the most matches?
 ```sql
 SELECT t.team_name, 
        COUNT(m.winner_id) AS Matches_Won
