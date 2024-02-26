@@ -87,7 +87,7 @@ JOIN players p
 ON t.team_id = p.team_id
 WHERE player_id = 3;
 ```
-##### 3. What is the total number of players in each team?
+### 3. What is the total number of players in each team?
 ```sql
 SELECT t.team_id AS team_id,
        t.team_name AS team_name,
