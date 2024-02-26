@@ -122,7 +122,7 @@ JOIN teams t
 ON m.winner_id = t.team_id
 GROUP BY t.team_name;
 ```
-##### 7. What is the average salary of players in the teams with country 'USA'?
+### 7. What is the average salary of players in the teams with country 'USA'?
 ```sql
 SELECT AVG(p.salary) AS Avg_Salary
 FROM teams t 
