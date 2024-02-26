@@ -73,7 +73,7 @@ VALUES (1, 1, 2, '2022-01-01', 1, 16, 14),
 
 ## Business Queries
 
-##### 1. What are the names of the players whose salary is greater than 100,000?
+### 1. What are the names of the players whose salary is greater than 100,000?
 ```sql
 SELECT player_name
 FROM players
