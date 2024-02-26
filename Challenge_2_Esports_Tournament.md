@@ -97,7 +97,7 @@ JOIN players p
 ON t.team_id = p.team_id
 GROUP BY team_id, team_name;
 ```
-##### 4. What is the team name and captain name of the team with team_id = 2?
+### 4. What is the team name and captain name of the team with team_id = 2?
 ```sql
 SELECT t.team_name,
 	   p.player_name
